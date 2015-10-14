@@ -350,7 +350,7 @@ func piping(dst, src packetConn) error {
 		if err != nil {
 			return err
 		}
-
+		fmt.Println(string(p))
 		err = dst.writePacket(p)
 
 		if err != nil {
