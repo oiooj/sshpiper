@@ -8,6 +8,7 @@ import (
 	"bufio"
 	"errors"
 	"io"
+	"fmt"
 )
 
 const (
@@ -126,7 +127,7 @@ func (s *connectionState) readPacket(r *bufio.Reader) ([]byte, error) {
 	// packet out here.
 	fresh := make([]byte, len(packet))
 	copy(fresh, packet)
-
+	fmt.Println(fresh)
 	return fresh, err
 }
 
